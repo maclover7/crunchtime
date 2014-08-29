@@ -9,14 +9,14 @@ class CoursesController < ApplicationController
   end
 
   def new
-    @course = Course.new
+    @course = current_user.courses.build #Course.new
   end
 
   def edit
   end
 
   def create
-    @course = Course.new(course_params)
+    @course = current_user.courses.build(course_params)
 
     respond_to do |format|
       if @course.save
@@ -48,6 +48,11 @@ class CoursesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_course
       @course = Course.find(params[:id])
+    end
+
+    def correct_user
+      @course = current_user.courses.find_by(id: params[:id])
+      redirect_to root_path, notice: "Not authorized to edit this course" if @course.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

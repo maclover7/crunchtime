@@ -9,14 +9,14 @@ class NotesController < ApplicationController
   end
 
   def new
-    @note = Note.new
+    @note = current_user.notes.build
   end
 
   def edit
   end
 
   def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.build(note_params)
 
     respond_to do |format|
       if @note.save
@@ -50,6 +50,10 @@ class NotesController < ApplicationController
       @note = Note.find(params[:id])
     end
 
+    def correct_user
+      @note = current_user.notes.find_by(id: params[:id])
+      redirect_to root_path, notice: "Not authorized to edit this note" if @note.nil?
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
       params.require(:note).permit(:title, :body)
