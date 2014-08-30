@@ -1,3 +1,4 @@
+<%= tinymce_assets %>
 <%= form_for(@note) do |f| %>
   <% if @note.errors.any? %>
     <div id="error_explanation">
@@ -19,7 +20,6 @@
     <%= f.label :body %><br>
     <!--<%= f.text_area #:body, class: "form-control" %>-->
     <%= f.text_area :body, :class => "tinymce", :rows => 40, :cols => 120 %>
-    <%= tinymce %>
   </div>
   <div class="form-group">
     <%= f.label :course_id, "Course" %><br />
@@ -29,3 +29,4 @@
     <%= f.submit "Create Note", class: "btn btn-primary" %>
   </div>
 <% end %>
+<%= tinymce %>
