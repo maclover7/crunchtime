@@ -3,7 +3,9 @@ class NotesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @notes = Note.all
+    @user = current_user#@user = User.find(params[:id])
+    @notes = @user.notes
+    #@notes = Note.all
   end
 
   def show
