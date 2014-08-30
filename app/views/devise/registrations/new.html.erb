@@ -4,7 +4,7 @@
   </div>
 
     <div class="panel-body">
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {class: "well"}) do |f| %>
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
         <div class="form-group">
