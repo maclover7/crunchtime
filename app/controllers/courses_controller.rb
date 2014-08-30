@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:id])
     @courses = @user.courses
     #@courses = Course.all
   end
