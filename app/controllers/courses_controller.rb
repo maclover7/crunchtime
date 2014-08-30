@@ -1,17 +1,19 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user!
 
   def index
-    @courses = Course.all
+    @user = User.find(params[:user_id])
+    @courses = @user.courses
+    #@courses = Course.all
   end
 
   def show
   end
 
   def new
-    @course = current_user.courses.build #Course.new
+    @course = current_user.courses.build
   end
 
   def edit
@@ -59,6 +61,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:title)
+      params.require(:course).permit(:title, :user_id)
     end
 end
