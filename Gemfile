@@ -21,6 +21,6 @@ group :production do
 end
 
 gem 'devise'
-gem 'ckeditor'
+gem 'ckeditor', '~> 4.1.0'
 gem 'paperclip'
 gem 'aws-sdk'
