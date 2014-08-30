@@ -20,7 +20,8 @@
     <%= f.text_area :body %>
   </div>
   <div class="field">
-    <%= f.collection_select(:course_id, Course.all, :id, :course_title) %>
+    <!-- <%= f.collection_select(#:course_id, Course.all, :id, :course_title) %> -->
+    <%= f.collection_select :course_id, Course.find(:all), :id, :title, :prompt => "Select a Course" %>
   </div>
   <div class="actions">
     <%= f.submit %>
