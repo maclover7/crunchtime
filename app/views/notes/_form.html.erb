@@ -20,7 +20,7 @@
     <%= f.text_area :body %>
   </div>
   <div class="field">
-    <%= f.collection_select(:course_id, Course.all, :id, :course_title, {:include_blank => true}) %>
+    <%= f.collection_select(:course_id, Course.all, :id, :course_title) %>
   </div>
   <div class="actions">
     <%= f.submit %>
