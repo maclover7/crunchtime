@@ -23,3 +23,4 @@ end
 gem 'devise'
 gem 'ckeditor'
 gem 'paperclip'
+gem 'aws-sdk'
