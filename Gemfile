@@ -21,3 +21,5 @@ group :production do
 end
 
 gem 'devise'
+gem 'font-awesome-sass'
+gem "summernote-rails"
