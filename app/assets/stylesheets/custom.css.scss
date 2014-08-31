@@ -1,5 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+/* Summernote */
+$iconSpritePath: '';
+$iconWhiteSpritePath: '';
 
+/* Pinteresting Design */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 $body-bg:                                                   #ecf0f1;
 $font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                                        45px;
@@ -8,8 +12,10 @@ $navbar-default-brand-color:      #c0392b;
 $brand-primary:                                    #c0392b;
 $jumbotron-bg:                                         white;
 
+/* Import Bootstrap */
 @import 'bootstrap';
 
+/* Last bit from Pinteresting Design */
 .center {
      text-align: center;
 }
@@ -18,7 +24,8 @@ $jumbotron-bg:                                         white;
      font-weight: bold;
 }
 
-/* Summernote */
-$iconSpritePath: '';
-$iconWhiteSpritePath: '';
+/* Final Summernote */
 body {padding-top:3em;}
+
+/* Import Bootstrap Responsive */
+@import 'bootstrap-responsive';
