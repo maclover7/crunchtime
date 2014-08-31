@@ -22,5 +22,5 @@ end
 
 gem 'devise'
 gem 'bootstrap-sass'
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 gem "summernote-rails"
