@@ -18,12 +18,7 @@
 
   <div class="form-group">
     <%= f.label :body %><br>
-    <%= f.cktext_area :body, :class => 'someclass', :ckeditor => {:language => 'uk'} %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :image %>
-    <%= f.file_field :image, class: "form-control" %>
+    <%= f.text_area :body, :class => 'form-control' %>
   </div>
 
   <div class="form-group">
