@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :todo_items
+
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   root "pages#home"
   resources :courses

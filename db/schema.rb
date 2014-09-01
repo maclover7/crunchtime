@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901123453) do
+ActiveRecord::Schema.define(version: 20140901125456) do
 
   create_table "bootsy_image_galleries", force: true do |t|
     t.integer  "bootsy_resource_id"
@@ -51,6 +51,15 @@ ActiveRecord::Schema.define(version: 20140901123453) do
 
   add_index "notes", ["course_id"], name: "index_notes_on_course_id"
   add_index "notes", ["user_id"], name: "index_notes_on_user_id"
+
+  create_table "todo_items", force: true do |t|
+    t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "course_id"
+  end
+
+  add_index "todo_items", ["course_id"], name: "index_todo_items_on_course_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
