@@ -13,9 +13,9 @@
 
   <div class="field">
     <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.text_field :body, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Todo", class: "btn btn-primary" %>
   </div>
 <% end %>
