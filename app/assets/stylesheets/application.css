@@ -11,7 +11,5 @@
  * file per style scope.
  *
  *= require_self
- *= require font-awesome
- *= require summernote
  *= require_tree .
  */
