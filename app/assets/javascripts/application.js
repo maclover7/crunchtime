@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require summernote.min
-//= require posts
+//= require notes
 // require turbolinks
 // require_tree .
