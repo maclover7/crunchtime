@@ -4,12 +4,12 @@ Rails.application.routes.draw do
 
   root "pages#home"
 
-  resources :courses do
-    resources :todo_items
-  end
+  resources :courses
+  
+  resources :todo_items
 
   resources :notes
-  
+
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
