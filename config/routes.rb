@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :todo_items
-
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
   root "pages#home"
-  resources :courses
+
+  resources :courses do
+    resources :todo_items
+  end
+
   resources :notes
+  
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
