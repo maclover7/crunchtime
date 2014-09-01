@@ -21,6 +21,7 @@ group :production do
 end
 
 gem 'devise'
-gem 'bootstrap-sass'
-gem 'font-awesome-rails'
-gem "summernote-rails"
+gem 'bootstrap-sass', '~> 3.0.2.0'
+gem 'font-awesome-sass'
+# gem 'font-awesome-rails'
+gem "summernote-rails", github: 'rorlab/summernote-rails'
